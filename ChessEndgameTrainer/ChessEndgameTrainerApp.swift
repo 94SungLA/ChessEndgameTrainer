@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ChessEndgameTrainerApp: App {
+    init() {
+        AppFont.register()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: TrainingRecord.self)
     }
 }
